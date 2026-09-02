@@ -1,0 +1,28 @@
+# Dataset configuration
+# Point "raw_dir" at a folder that contains two subfolders: "real" and "fake"
+# Each subfolder should hold images (.jpg, .png) or videos (.mp4, .avi) of that class.
+
+dataset:
+  raw_dir: "data/raw"
+  processed_dir: "data/processed"
+  image_size: [128, 128]
+  classes: ["real", "fake"]
+  test_split: 0.15
+  val_split: 0.15
+  seed: 42
+
+video:
+  frame_sample_rate: 15   # extract 1 frame every N frames
+  max_frames_per_video: 30
+
+augmentation:
+  rotation_range: 15
+  horizontal_flip: true
+  brightness_range: [0.8, 1.2]
+  zoom_range: 0.1
+  noise_std: 0.02
+
+training:
+  batch_size: 32
+  epochs: 30
+  learning_rate: 0.0001
