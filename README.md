@@ -99,7 +99,7 @@ Setup and Usage
 1. Clone the repository
 
 bash
-git clone https://github.com/yourusername/deepfake-detection-system.git
+git clone
 cd deepfake-detection-system
 
 2. Install dependencies
